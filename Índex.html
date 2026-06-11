@@ -1,1 +1,220 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Para Lara Kelly 💛</title>
 
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:Arial;}
+
+body{
+background: linear-gradient(135deg,#ffe0ec,#ffd6a5,#ffcad4);
+min-height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+flex-direction:column;
+color:#333;
+}
+
+.container{
+width:95%;
+max-width:900px;
+background:white;
+border-radius:25px;
+padding:25px;
+box-shadow:0 20px 50px rgba(0,0,0,0.2);
+animation:fadeIn 1.5s ease;
+margin:30px 0;
+}
+
+@keyframes fadeIn{
+from{opacity:0;transform:translateY(20px);}
+to{opacity:1;transform:translateY(0);}
+}
+
+h1{
+text-align:center;
+font-size:32px;
+color:#e11d74;
+margin-bottom:10px;
+}
+
+.subtitle{
+text-align:center;
+margin-bottom:20px;
+font-size:15px;
+color:#666;
+}
+
+.card{
+margin-top:20px;
+background:#fff0f6;
+padding:20px;
+border-radius:20px;
+border-left:5px solid #e11d74;
+}
+
+.gallery{
+display:grid;
+grid-template-columns:repeat(2,1fr);
+gap:10px;
+margin-top:20px;
+}
+
+.gallery img{
+width:100%;
+height:200px;
+object-fit:cover;
+border-radius:15px;
+transition:0.3s;
+}
+
+.gallery img:hover{
+transform:scale(1.04);
+}
+
+.timeline{
+margin-top:20px;
+}
+
+.item{
+margin-bottom:15px;
+padding-left:15px;
+border-left:3px solid #ff69b4;
+}
+
+.item h3{
+color:#e11d74;
+font-size:16px;
+}
+
+.counter{
+text-align:center;
+margin-top:20px;
+font-size:18px;
+color:#e11d74;
+font-weight:bold;
+}
+
+.btn{
+display:block;
+margin:20px auto 0;
+padding:12px 20px;
+background:#e11d74;
+color:white;
+border:none;
+border-radius:20px;
+cursor:pointer;
+transition:0.3s;
+}
+
+.btn:hover{
+background:#b01259;
+transform:scale(1.05);
+}
+
+.footer{
+text-align:center;
+margin-top:25px;
+font-size:13px;
+color:#888;
+}
+
+.love{
+text-align:center;
+font-size:18px;
+margin-top:15px;
+color:#e11d74;
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>Para Lara Kelly 💛</h1>
+<p class="subtitle">
+Já éramos amigas, mas foi em agosto do ano passado que nossa amizade realmente se fortaleceu
+</p>
+
+<div class="card">
+<p>
+Lara, a gente já se conhecia antes, já existia carinho e história entre nós.
+Mas foi depois que eu saí da empresa da sua mãe, em agosto do ano passado, que nossa amizade mudou de nível.
+O que era amizade virou conexão de verdade, daquelas que não se perdem com o tempo.
+</p>
+</div>
+
+<div class="counter" id="counter">
+Carregando nossa história... 💛
+</div>
+
+<div class="gallery">
+<img src="IMG_1.jpg" alt="Foto 1">
+<img src="IMG_2.jpg" alt="Foto 2">
+<img src="IMG_3.jpg" alt="Foto 3">
+<img src="IMG_4.jpg" alt="Foto 4">
+</div>
+
+<div class="timeline">
+
+<div class="item">
+<h3>🌸 Antes</h3>
+<p>A gente já era amiga, mas ainda sem entender o valor real disso.</p>
+</div>
+
+<div class="item">
+<h3>⏳ Agosto do ano passado</h3>
+<p>Foi quando tudo mudou e nossa amizade se fortaleceu de verdade.</p>
+</div>
+
+<div class="item">
+<h3>💬 Depois disso</h3>
+<p>Mesmo com a vida corrida, a gente nunca deixou de se aproximar de novo.</p>
+</div>
+
+<div class="item">
+<h3>💛 Hoje</h3>
+<p>Hoje eu só tenho certeza de que você é parte importante da minha vida.</p>
+</div>
+
+</div>
+
+<button class="btn" onclick="document.getElementById('msg').scrollIntoView({behavior:'smooth'})">
+Ver mensagem 💌
+</button>
+
+<div id="msg" class="card">
+<p class="love">
+Lara Kelly, algumas amizades não começam no tempo certo…  
+Elas só esperam o momento certo pra ficar fortes 💛
+</p>
+</div>
+
+<p class="footer">Feito com carinho ✨</p>
+
+</div>
+
+<script>
+// contador desde 01/08/2025
+const startDate = new Date(2025, 7, 1); // agosto = mês 7 (JS começa no 0)
+const counter = document.getElementById("counter");
+
+function updateCounter(){
+const now = new Date();
+const diff = now - startDate;
+
+const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+const months = Math.floor(days / 30);
+
+counter.innerHTML = `Estamos fortalecendo nossa amizade há aproximadamente <b>${months} meses</b> 💛<br><small>(${days} dias de conexão)</small>`;
+}
+
+updateCounter();
+</script>
+
+</body>
+</html>
